@@ -76,6 +76,7 @@ class FlatsController extends Controller
 
         $data = $query->orderBy('flats.price')
                 ->asArray()
+                ->limit(50)
                 ->all();
 
         for($i = 0; $i < count($data); $i++) {
